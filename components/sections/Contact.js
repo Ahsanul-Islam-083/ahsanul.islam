@@ -8,9 +8,9 @@ import { FaPaperPlane, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
-const EMAILJS_SERVICE_ID = "service_ufb9d1a";
-const EMAILJS_TEMPLATE_ID = "template_4s3zent";
-const EMAILJS_PUBLIC_KEY = "sLY-_KSPkJcqR07wg";
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const socials = [
   {

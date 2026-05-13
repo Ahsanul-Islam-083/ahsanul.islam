@@ -121,7 +121,7 @@ Web Developer | MERN Stack Specialist
 
 -   **GitHub**: [@Ahsanul-Islam-083](https://github.com/Ahsanul-Islam-083)
 -   **Portfolio**: [ahsanulislam.dev](https://ahsanulislam.dev)
--   **LinkedIn**: [Ahsanul Islam](https://linkedin.com/in/ahsanul-islam-dev)
+-   **LinkedIn**: [Ahsanul Islam](www.linkedin.com/in/ahsanulislamrifat)
 
 ---
 

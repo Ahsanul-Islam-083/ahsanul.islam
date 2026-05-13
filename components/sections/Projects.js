@@ -69,22 +69,43 @@ export default function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#0F1115]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6 backdrop-blur-sm">
-                  <a href={project.github} className="w-12 h-12 rounded-full bg-[#C9B59C] text-[#0F1115] flex items-center justify-center text-xl hover:scale-110 transition-transform"><FaGithub /></a>
-                  <a href={project.live} className="w-12 h-12 rounded-full bg-[#F5F1EC] text-[#0F1115] flex items-center justify-center text-lg hover:scale-110 transition-transform"><FaExternalLinkAlt /></a>
+                {/* Hover overlay — visible on desktop only */}
+                <div className="absolute inset-0 bg-[#0F1115]/60 opacity-0 group-hover:opacity-100 transition-opacity md:flex hidden items-center justify-center gap-6 backdrop-blur-sm">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#C9B59C] text-[#0F1115] flex items-center justify-center text-xl hover:scale-110 transition-transform"><FaGithub /></a>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#F5F1EC] text-[#0F1115] flex items-center justify-center text-lg hover:scale-110 transition-transform"><FaExternalLinkAlt /></a>
                 </div>
               </div>
               
               <div className="p-4 sm:p-8 flex-1 flex flex-col">
                 <span className="text-[#C9B59C] font-mono text-xs mb-2 uppercase">{project.category}</span>
                 <h3 className="text-xl sm:text-2xl font-display font-bold text-[#F5F1EC] mb-4">{project.title}</h3>
-                <p className="text-[#CBBFB2] mb-6 line-clamp-2">{project.description}</p>
-                <div className="mt-auto flex flex-wrap gap-1.5 sm:gap-2">
+                <p className="text-[#CBBFB2] mb-4 line-clamp-2">{project.description}</p>
+                <div className="mt-auto flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                   {project.tags.map(tag => (
                     <span key={tag} className="px-3 py-1 bg-[#0F1115]/50 border border-[#2A313A] rounded-full text-[10px] uppercase tracking-wider text-[#CBBFB2]">
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                {/* Mobile/Tablet buttons — visible on small screens only */}
+                <div className="flex gap-3 md:hidden mt-2">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border border-[#2A313A] text-[#CBBFB2] hover:border-[#C9B59C] hover:text-[#C9B59C] transition-colors text-sm font-medium"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#C9B59C] text-[#0F1115] hover:bg-[#D8C6AF] transition-colors text-sm font-bold"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
                 </div>
               </div>
             </motion.div>

@@ -52,12 +52,12 @@ export default function Hero() {
     <section
       id="home"
       ref={container}
-      className="relative min-h-screen w-full flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 px-6 sm:px-12 md:px-20 lg:px-28 xl:px-36 pt-20 sm:pt-24 pb-16 overflow-hidden bg-[#0F1115]"
+      className="relative min-h-screen w-full flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 px-6 sm:px-12 md:px-20 lg:px-28 xl:px-36 pt-20 sm:pt-24 pb-28 lg:pb-16 overflow-hidden bg-[#0F1115]"
     >
 
 
       {/* Left Content */}
-      <div className="flex flex-col gap-5 text-center lg:text-left z-10 w-full lg:w-1/2 max-w-2xl">
+      <div className="flex flex-col gap-5 text-center lg:text-left z-10 w-full lg:w-1/2 max-w-2xl order-last lg:order-first">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -162,7 +162,7 @@ export default function Hero() {
       </div>
 
       {/* Right Content - Profile Image with Rings */}
-      <div className="relative flex justify-center items-center z-10 w-full lg:w-1/2">
+      <div className="relative flex justify-center items-center z-10 w-full lg:w-1/2 order-first lg:order-last">
         <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px] mx-auto">
           <div className="absolute inset-0 rounded-full bg-[#C9B59C]/5 blur-2xl scale-110 z-[-1]" />
           <div className="absolute inset-0 border-2 border-[#C9B59C]/20 rounded-full animate-[spin_10s_linear_infinite]" />

@@ -79,7 +79,7 @@ export default function Projects() {
               <div className="p-4 sm:p-8 flex-1 flex flex-col">
                 <span className="text-[#C9B59C] font-mono text-xs mb-2 uppercase">{project.category}</span>
                 <h3 className="text-xl sm:text-2xl font-display font-bold text-[#F5F1EC] mb-4">{project.title}</h3>
-                <p className="text-[#CBBFB2] md:mb-4 line-clamp-3">{project.description}</p>
+                <p className="text-[#CBBFB2] mb-3 line-clamp-3">{project.description}</p>
                 <div className="mt-auto flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                   {project.tags.map(tag => (
                     <span key={tag} className="px-3 py-1 bg-[#0F1115]/50 border border-[#2A313A] rounded-full text-[10px] uppercase tracking-wider text-[#CBBFB2]">

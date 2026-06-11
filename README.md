@@ -1,4 +1,4 @@
-# 🚀 Modern Portfolio | Ahsanul Islam
+# 🚀 [Modern Portfolio | Ahsanul Islam](https://ahsanulislamdev.vercel.app)
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -120,8 +120,8 @@ A high-performance, visually stunning portfolio built with **Next.js 16**, **Rea
 Web Developer | MERN Stack Specialist
 
 -   **GitHub**: [@Ahsanul-Islam-083](https://github.com/Ahsanul-Islam-083)
--   **Portfolio**: [ahsanulislam.dev](https://ahsanulislam.dev)
--   **LinkedIn**: [Ahsanul Islam](https://linkedin.com/in/ahsanul-islam-dev)
+-   **Portfolio**: [ahsanulislam.dev](https://ahsanulislamdev.vercel.app)
+-   **LinkedIn**: [Ahsanul Islam](https://www.linkedin.com/in/ahsanulislamrifat)
 
 ---
 

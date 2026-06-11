@@ -5,6 +5,15 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "HappyTails — Hub",
+    category: "Full-Stack Development",
+    description: "HappyTails is a full-stack pet adoption platform built with Next.js. It allows users to explore pets available for adoption, view detailed profiles, and submit adoption requests — all through a clean, recruiter-friendly interface. Pet owners and shelters can manage their listings, review incoming adoption requests, and approve or reject them with ease.",
+    image: "https://i.ibb.co.com/TMw4D3kT/Happy-Tails.png",
+    tags: ["Next.js", "Node.js", "Express.js", "JavaScript", "Tailwind", "HeroUI", "BetterAuth", "MongoDB", "Framer Motion"],
+    github: "https://github.com/Ahsanul-Islam-083/happytails-hub",
+    live: "https://happytails-hub.vercel.app/"
+  },
+  {
     title: "SunCart — Modern Summer E-Commerce Platform",
     category: "MERN-Stack Development",
     description: "Explore, Shop & Stay Sun-Ready — A clean, responsive summer e-commerce platform built with Next.js 16, featuring authentication, protected routes, and a seamless shopping experience.",

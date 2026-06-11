@@ -9,7 +9,7 @@ const projects = [
     category: "Full-Stack Development",
     description: "HappyTails is a full-stack pet adoption platform built with Next.js. It allows users to explore pets available for adoption, view detailed profiles, and submit adoption requests — all through a clean, recruiter-friendly interface. Pet owners and shelters can manage their listings, review incoming adoption requests, and approve or reject them with ease.",
     image: "https://i.ibb.co.com/TMw4D3kT/Happy-Tails.png",
-    tags: ["Next.js", "Node.js", "Express.js", "JavaScript", "Tailwind", "HeroUI", "BetterAuth", "MongoDB", "Framer Motion"],
+    tags: ["Next.js", "Node.js", "Express.js", "JavaScript (ES6+)", "Tailwind", "HeroUI", "BetterAuth", "MongoDB", "Framer Motion"],
     github: "https://github.com/Ahsanul-Islam-083/happytails-hub",
     live: "https://happytails-hub.vercel.app/"
   },
@@ -30,6 +30,15 @@ const projects = [
     tags: ["Next.js", "Tailwind", "HeroUI", "BetterAuth", "MongoDB"],
     github: "https://github.com/Ahsanul-Islam-083/pixgen",
     live: "https://pixgen-nine.vercel.app/"
+  },
+  {
+    title: "KeenKeeper – Your Personal Friendship Manager",
+    category: "Frontend Engineering",
+    description: "KeenKeeper is a relationship management app that helps you stay connected with the people who matter most. It tracks when you last contacted each friend, reminds you when you're overdue, and logs every interaction — calls, texts, and video chats — so no important relationship slips through the cracks.",
+    image: "https://i.ibb.co.com/nNSV7N35/Keen-Keeper.png",
+    tags: ["Next.js", "JavaScript (ES6+)", "Tailwind", "HeroUI", "Recharts", "Context API"],
+    github: "https://github.com/Ahsanul-Islam-083/keen-keeper",
+    live: "https://keen-keeper-zeta.vercel.app/"
   },
   {
     title: "DigiTools — Premium Digital Tools Store",

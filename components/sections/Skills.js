@@ -26,18 +26,18 @@ import {
 import { VscCode } from "react-icons/vsc";
 
 const techStack = [
-  { name: "HTML / CSS", icon: <SiHtml5 />, color: "#E34F26" },
-  { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
   { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
   { name: "Next.js", icon: <SiNextdotjs />, color: "#FFFFFF" },
-  { name: "TailwindCSS", icon: <SiTailwindcss />, color: "#06B6D4" },
-  { name: "Redux / Zustand", icon: <SiRedux />, color: "#764ABC" },
-  { name: "Material UI", icon: <SiMui />, color: "#007FFF" },
-  { name: "Bootstrap", icon: <FaBootstrap />, color: "#7952B3" },
   { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
   { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
   { name: "Firebase", icon: <SiFirebase />, color: "#FFCA28" },
   { name: "JWT Auth", icon: <SiJsonwebtokens />, color: "#D63AFF" },
+  { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+  { name: "HTML / CSS", icon: <SiHtml5 />, color: "#E34F26" },
+  { name: "TailwindCSS", icon: <SiTailwindcss />, color: "#06B6D4" },
+  { name: "Redux / Zustand", icon: <SiRedux />, color: "#764ABC" },
+  { name: "Material UI", icon: <SiMui />, color: "#007FFF" },
+  { name: "Bootstrap", icon: <FaBootstrap />, color: "#7952B3" },
   { name: "Framer Motion", icon: <SiFramer />, color: "#0055FF" },
   { name: "GSAP", icon: <SiGreensock />, color: "#88CE02" },
   { name: "Git & GitHub", icon: <FaGitAlt />, color: "#F05032" },
@@ -48,10 +48,10 @@ const techStack = [
 
 
 const frontendSkills = [
-  { name: "HTML / CSS", level: "Expert", icon: "🌐" },
-  { name: "JavaScript", level: "Expert", icon: "JS" },
   { name: "React.js", level: "Expert", icon: "⚛️" },
   { name: "Next.js", level: "Expert", icon: "▲" },
+  { name: "HTML / CSS", level: "Expert", icon: "🌐" },
+  { name: "JavaScript", level: "Expert", icon: "JS" },
   { name: "TailwindCSS", level: "Expert", icon: "💨" },
   { name: "Redux / Zustand", level: "Advanced", icon: "🔄" },
   { name: "Shadcn UI", level: "Advanced", icon: "🎨" },
@@ -68,8 +68,8 @@ const backendSkills = [
   { name: "MongoDB", level: "Expert", icon: "🍃" },
   { name: "REST API", level: "Expert", icon: "🔗" },
   { name: "Firebase", level: "Advanced", icon: "🔥" },
-  { name: "JWT Auth", level: "Advanced", icon: "🔑" },
   { name: "Better Auth", level: "Intermediate", icon: "🛡️" },
+  { name: "JWT Auth", level: "Advanced", icon: "🔑" },
 ];
 
 

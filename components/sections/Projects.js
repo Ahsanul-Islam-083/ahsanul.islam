@@ -5,13 +5,40 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "HR Fashion — Agentic AI Retail & Careers Platform",
+    category: "Full-Stack Development / AI Integration",
+    description: "Shop, Apply & Interview with AI — A full-stack agentic AI platform for a fashion & manufacturing brand, featuring an AI style assistant, AI-driven mock interviews, and personalized recommendations.",
+    image: "https://i.ibb.co.com/yBPZcfKn/HRO.jpg",
+    tags: ["Next.js", "TypeScript", "Tailwind", "BetterAuth", "MongoDB", "Express", "TanStack Query", "Groq AI"],
+    github: "https://github.com/Ahsanul-Islam-083/hrfashion-frontend",
+    live: "https://hrfashion.vercel.app"
+  },
+  {
+    title: "FitFlow — Fitness Class Marketplace",
+    category: "Full-Stack Development",
+    description: "Discover, Book & Train — A role-based fitness marketplace connecting members, trainers, and admins with Stripe-powered booking, forums, and dashboard analytics.",
+    image: "https://i.ibb.co.com/v46M0XkH/Fit.jpg",
+    tags: ["Next.js", "React", "Tailwind", "Shadcn UI", "BetterAuth", "Stripe", "MongoDB"],
+    github: "https://github.com/Ahsanul-Islam-083/fitflow",
+    live: "https://fitflow-green.vercel.app"
+  },
+  {
     title: "HappyTails — Hub",
     category: "Full-Stack Development",
     description: "HappyTails is a full-stack pet adoption platform built with Next.js. It allows users to explore pets available for adoption, view detailed profiles, and submit adoption requests — all through a clean, recruiter-friendly interface. Pet owners and shelters can manage their listings, review incoming adoption requests, and approve or reject them with ease.",
     image: "https://i.ibb.co.com/TMw4D3kT/Happy-Tails.png",
     tags: ["Next.js", "Node.js", "Express.js", "JavaScript (ES6+)", "Tailwind", "HeroUI", "BetterAuth", "MongoDB", "Framer Motion"],
     github: "https://github.com/Ahsanul-Islam-083/happytails-hub",
-    live: "https://happytails-hub.vercel.app/"
+    live: "https://happytails-hub.vercel.app"
+  },
+  {
+    title: "NestHaven — Property Rental Listing Platform",
+    category: "MERN-Stack Development",
+    description: "Browse, List & Manage Rentals — A full-stack property rental platform for Dhaka built with Next.js 16 and TypeScript, featuring JWT-secured listings, multi-image uploads, and a decoupled Express API.",
+    image: "https://i.ibb.co.com/b5hVwjjc/NST.jpg",
+    tags: ["Next.js", "TypeScript", "Tailwind", "BetterAuth", "MongoDB", "Express", "Framer Motion"],
+    github: "https://github.com/Ahsanul-Islam-083/nesthaven-frontend",
+    live: "https://nesthaven-pi.vercel.app"
   },
   {
     title: "SunCart — Modern Summer E-Commerce Platform",
@@ -20,7 +47,7 @@ const projects = [
     image: "https://i.ibb.co/BV2ywcK3/suncurt-Img.png",
     tags: ["Next.js", "Tailwind", "HeroUI", "BetterAuth", "MongoDB", "Swiper", "shadcn/ui"],
     github: "https://github.com/Ahsanul-Islam-083/suncart",
-    live: "https://suncart-sigma.vercel.app/"
+    live: "https://suncart-sigma.vercel.app"
   },
   {
     title: "PixGen — AI Image Gallery Platform",
@@ -29,7 +56,16 @@ const projects = [
     image: "https://i.ibb.co/jZH6MPVr/pixgen.png",
     tags: ["Next.js", "Tailwind", "HeroUI", "BetterAuth", "MongoDB"],
     github: "https://github.com/Ahsanul-Islam-083/pixgen",
-    live: "https://pixgen-nine.vercel.app/"
+    live: "https://pixgen-nine.vercel.app"
+  },
+  {
+    title: "Xai — Intelligence",
+    category: "Frontend / Motion Design",
+    description: "From Raw Data to Structured Intelligence — A single-page marketing site visualizing an AI data pipeline with a Three.js particle mesh, scroll-scrubbed storytelling, and an interactive dashboard preview.",
+    image: "https://i.ibb.co.com/KcDXYq4P/XAI.jpg",
+    tags: ["Next.js", "Three.js", "GSAP", "Framer Motion", "Tailwind"],
+    github: "https://github.com/Ahsanul-Islam-083/xai-intelligence",
+    live: "https://xai-intelligence-eight.vercel.app"
   },
   {
     title: "KeenKeeper – Your Personal Friendship Manager",
@@ -38,7 +74,7 @@ const projects = [
     image: "https://i.ibb.co.com/nNSV7N35/Keen-Keeper.png",
     tags: ["Next.js", "JavaScript (ES6+)", "Tailwind", "HeroUI", "Recharts", "Context API"],
     github: "https://github.com/Ahsanul-Islam-083/keen-keeper",
-    live: "https://keen-keeper-zeta.vercel.app/"
+    live: "https://keen-keeper-zeta.vercel.app"
   },
   {
     title: "DigiTools — Premium Digital Tools Store",
@@ -47,7 +83,7 @@ const projects = [
     image: "https://i.ibb.co/vxV7G2MN/digitools.png",
     tags: ["React.js", "Tailwind CSS", "DaisyUI", "JavaScript (ES6+)", "React-Toastify"],
     github: "https://github.com/Ahsanul-Islam-083/digi-tools",
-    live: "https://digi-tool.netlify.app/"
+    live: "https://digi-tool.netlify.app"
   },
   {
     title: " English Janala",
@@ -56,7 +92,7 @@ const projects = [
     image: "https://i.ibb.co/wN4yhRPz/english-Janala.png",
     tags: ["JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "API Integration", "Web Speech API"],
     github: "https://github.com/Ahsanul-Islam-083/english-janala-app",
-    live: "https://ahsanul-islam-083.github.io/english-janala-app/"
+    live: "https://ahsanul-islam-083.github.io/english-janala-app"
   }
 ];
 

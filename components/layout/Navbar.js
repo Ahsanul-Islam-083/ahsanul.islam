@@ -159,20 +159,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import Magnetic from "@/components/ui/Magnetic";
 import Image from "next/image";
 import { FiSun, FiMoon, FiX } from "react-icons/fi";
+import Link from "next/link";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Qualifications", href: "#qualifications" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Qualifications", href: "/#qualifications" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(true);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -190,6 +192,24 @@ export default function Navbar() {
     return () => { document.body.style.overflow = "unset"; };
   }, [isOpen]);
 
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.href.split("#")[1]))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   // Dark theme → light bars (#F5F1EC), Light theme → dark bars (#0F1115)
   const barColor = isDark ? "bg-[#F5F1EC]" : "bg-[#0F1115]";
 
@@ -197,41 +217,46 @@ export default function Navbar() {
     <>
       {/* ── Navbar ── */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 px-4 sm:px-12 md:px-20 flex justify-between items-center ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 px-4 sm:px-12 md:px-20 flex justify-between items-center ${isScrolled
             ? "bg-[#0F1115]/80 backdrop-blur-[12px] border-b border-[#2A313A]"
             : "bg-transparent"
-        }`}
+          }`}
       >
         {/* Logo */}
         <Magnetic>
-          <a href="#home" className="flex items-center">
+          <Link href="/#home" className="flex items-center">
             <Image
               src="/portfolioLogo.png"
               alt="Logo"
               width={120}
               height={40}
-              className={`object-contain h-10 sm:h-14 w-auto transition-all duration-300 ${
-                isDark ? "brightness-0 invert" : "brightness-0"
-              }`}
+              className={`object-contain h-10 sm:h-14 w-auto transition-all duration-300 ${isDark ? "brightness-0 invert" : "brightness-0"
+                }`}
               priority
             />
-          </a>
+          </Link>
         </Magnetic>
 
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex items-center gap-2 glass-card p-1.5 rounded-full px-4 border border-[#2A313A]">
-          {navLinks.map((link) => (
-            <Magnetic key={link.name}>
-              <a
-                href={link.href}
-                className="px-4 py-2 text-sm font-medium text-[#CBBFB2] hover:text-[#C9B59C] transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#C9B59C] transition-all group-hover:w-1/2" />
-              </a>
-            </Magnetic>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.split("#")[1];
+            return (
+              <Magnetic key={link.name}>
+                <Link
+                  href={link.href}
+                  className={`px-4 py-2 text-sm font-medium transition-colors relative group ${isActive ? "text-[#C9B59C]" : "text-[#CBBFB2] hover:text-[#C9B59C]"
+                    }`}
+                >
+                  {link.name}
+                  <span
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-[#C9B59C] transition-all ${isActive ? "w-1/2" : "w-0 group-hover:w-1/2"
+                      }`}
+                  />
+                </Link>
+              </Magnetic>
+            );
+          })}
         </div>
 
         {/* Right Side */}
@@ -248,7 +273,7 @@ export default function Navbar() {
           {/* Let's Talk — desktop only */}
           <Magnetic>
             <button className="hidden lg:block px-6 py-2.5 bg-[#F5F1EC] text-[#0F1115] text-sm font-bold rounded-full hover:bg-[#C9B59C] transition-colors">
-              <a href="#contact">Let's Talk</a>
+              <Link href="/#contact">Let's Talk</Link>
             </button>
           </Magnetic>
 
@@ -289,17 +314,20 @@ export default function Navbar() {
 
             {/* Nav links */}
             {navLinks.map((link, i) => (
-              <motion.a
+              <motion.div
                 key={link.name}
-                href={link.href}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                onClick={() => setIsOpen(false)}
-                className="text-2xl sm:text-4xl font-bold text-[#F5F1EC] hover:text-[#C9B59C] transition-colors"
               >
-                {link.name}
-              </motion.a>
+                <Link
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-2xl sm:text-4xl font-bold text-[#F5F1EC] hover:text-[#C9B59C] transition-colors"
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
             ))}
           </motion.div>
         )}

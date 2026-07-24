@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "hr-fashion",
+    "title": "HR Fashion — Agentic AI Retail & Careers Platform",
+    "category": "Full-Stack Development / AI Integration",
+    "description": "Shop, Apply & Interview with AI — A full-stack agentic AI platform for a fashion & manufacturing brand, featuring an AI style assistant, AI-driven mock interviews, and personalized recommendations.",
+    "image": "https://i.ibb.co.com/yBPZcfKn/HRO.jpg",
+    "tags": ["Next.js", "TypeScript", "Tailwind", "BetterAuth", "MongoDB", "Express", "TanStack Query", "Groq AI"],
+    "github": "https://github.com/Ahsanul-Islam-083/hrfashion-frontend",
+    "live": "https://hrfashion.vercel.app",
+    "challenges": "Building the AI chat assistant to answer from real, live product/job/service data instead of hallucinating required implementing genuine function/tool-calling with the Groq API rather than a static prompt — the assistant had to query the actual database through defined tools mid-conversation. The AI interview system added another layer: reliably parsing varied resume formats (PDF/DOC) with unpdf, then generating role-specific questions that combined resume content with job requirements, and scoring free-text answers consistently on a 0-100 scale with structured feedback.",
+    "improvements": "Add a non-AI fallback path for the interview scoring system similar to the one already built for recommendations, to keep the feature reliable if the AI provider has downtime. Expand the recommendation engine to factor in review/rating behavior alongside wishlist activity for sharper personalization."
+  },
+  {
+    "slug": "fitflow",
+    "title": "FitFlow — Fitness Class Marketplace",
+    "category": "Full-Stack Development",
+    "description": "Discover, Book & Train — A role-based fitness marketplace connecting members, trainers, and admins with Stripe-powered booking, forums, and dashboard analytics.",
+    "image": "https://i.ibb.co.com/v46M0XkH/Fit.jpg",
+    "tags": ["Next.js", "React", "Tailwind", "Shadcn UI", "BetterAuth", "Stripe", "MongoDB"],
+    "github": "https://github.com/Ahsanul-Islam-083/fitflow",
+    "live": "https://fitflow-green.vercel.app",
+    "challenges": "Coordinating three distinct role-based dashboards (member, trainer, admin) behind a single auth system meant careful middleware design in proxy.js to enforce route protection per role, on top of an already complex feature set spanning bookings, forums, and moderation. Integrating Stripe for secure class bookings required getting the checkout and confirmation flow to hold up reliably alongside the rest of the booking lifecycle (enrollment tracking, attendee lists, favorites).",
+    "improvements": "Add real-time notifications for booking confirmations and forum activity instead of relying on page refresh/poll patterns. Expand trainer analytics with more granular performance metrics per class over time."
+  },
+  {
+    "slug": "happytails-hub",
+    "title": "HappyTails — Hub",
+    "category": "Full-Stack Development",
+    "description": "HappyTails is a full-stack pet adoption platform built with Next.js. It allows users to explore pets available for adoption, view detailed profiles, and submit adoption requests — all through a clean, recruiter-friendly interface. Pet owners and shelters can manage their listings, review incoming adoption requests, and approve or reject them with ease.",
+    "image": "https://i.ibb.co.com/TMw4D3kT/Happy-Tails.png",
+    "tags": ["Next.js", "Node.js", "Express.js", "JavaScript (ES6+)", "Tailwind", "HeroUI", "BetterAuth", "MongoDB", "Framer Motion"],
+    "github": "https://github.com/Ahsanul-Islam-083/happytails-hub",
+    "live": "https://happytails-hub.vercel.app",
+    "challenges": "The adoption workflow needed careful business-rule enforcement on the backend — only one adoption request per pet can ever be approved, owners can't request their own pets, and approving a request must atomically flip the pet's status to adopted so no further requests slip through. Search and filtering across pet listings (by name and species) also required tuning MongoDB's $regex and $in operators to stay fast and accurate as data grew, all behind JWT auth issued via HTTPOnly cookies rather than a client-exposed token.",
+    "improvements": "Add real-time status updates (e.g. via WebSockets) so an owner reviewing requests sees changes instantly instead of needing a refresh. Introduce messaging between adopters and pet owners directly within the platform, and add pagination/infinite scroll to the pet browsing page as listings scale."
+  },
+  {
+    "slug": "nesthaven",
+    "title": "NestHaven — Property Rental Listing Platform",
+    "category": "MERN-Stack Development",
+    "description": "Browse, List & Manage Rentals — A full-stack property rental platform for Dhaka built with Next.js 16 and TypeScript, featuring JWT-secured listings, multi-image uploads, and a decoupled Express API.",
+    "image": "https://i.ibb.co.com/b5hVwjjc/NST.jpg",
+    "tags": ["Next.js", "TypeScript", "Tailwind", "BetterAuth", "MongoDB", "Express", "Framer Motion"],
+    "github": "https://github.com/Ahsanul-Islam-083/nesthaven-frontend",
+    "live": "https://nesthaven-pi.vercel.app",
+    "challenges": "The backend deliberately doesn't own authentication — it verifies JWTs issued by the frontend's Better Auth against a remote JWKS endpoint. Getting that cross-service trust working correctly (fetching and validating signed tokens issued by a separate app) was trickier than a typical single-app auth setup, and required the backend to always know the frontend's CLIENT_URL to locate the JWKS route.",
+    "improvements": "Add owner-side edit functionality for listings (currently only create and delete are supported). Introduce saved/favorited properties for tenants and messaging between tenants and property owners."
+  },
+  {
+    "slug": "suncart",
+    "title": "SunCart — Modern Summer E-Commerce Platform",
+    "category": "MERN-Stack Development",
+    "description": "Explore, Shop & Stay Sun-Ready — A clean, responsive summer e-commerce platform built with Next.js 16, featuring authentication, protected routes, and a seamless shopping experience.",
+    "image": "https://i.ibb.co/BV2ywcK3/suncurt-Img.png",
+    "tags": ["Next.js", "Tailwind", "HeroUI", "BetterAuth", "MongoDB", "Swiper", "shadcn/ui"],
+    "github": "https://github.com/Ahsanul-Islam-083/suncart",
+    "live": "https://suncart-sigma.vercel.app",
+    "challenges": "Getting the post-login redirect flow right was trickier than expected — an unauthenticated user hitting a protected route like a product detail page needed to land on sign-in, then be routed back to the exact page they originally wanted via a callbackURL, rather than dumped on a generic home or profile page. Balancing a component-heavy UI (HeroUI, Swiper banners, a marquee, skeleton loaders) with consistent responsive behavior across every screen size also took iteration.",
+    "improvements": "Add a persistent shopping cart and real checkout flow — the current version focuses on browsing and auth rather than actual purchasing. Introduce product reviews/ratings and wishlist functionality tied to user profiles."
+  },
+  {
+    "slug": "pixgen",
+    "title": "PixGen — AI Image Gallery Platform",
+    "category": "MERN-Stack Development",
+    "description": "Create. Imagine. Generate. — A modern AI-powered gallery platform where users can explore, view, and interact with AI-generated images with authentication and protected routes.",
+    "image": "https://i.ibb.co/jZH6MPVr/pixgen.png",
+    "tags": ["Next.js", "Tailwind", "HeroUI", "BetterAuth", "MongoDB"],
+    "github": "https://github.com/Ahsanul-Islam-083/pixgen",
+    "live": "https://pixgen-nine.vercel.app",
+    "challenges": "Presenting detailed technical metadata (prompt text, model, tags, resolution) per image behind a protected route while keeping the public gallery browsing experience fast and open required carefully splitting what data loads publicly versus what's gated. Category filtering across a growing image set also needed to stay snappy without over-fetching on every filter change.",
+    "improvements": "Add the actual AI image generation capability rather than just browsing a pre-populated gallery — letting users submit prompts and generate new images directly. Introduce likes/collections so users can curate and save sets of favorite generations."
+  },
+  {
+    "slug": "xai-intelligence",
+    "title": "Xai — Intelligence",
+    "category": "Frontend / Motion Design",
+    "description": "From Raw Data to Structured Intelligence — A single-page marketing site visualizing an AI data pipeline with a Three.js particle mesh, scroll-scrubbed storytelling, and an interactive dashboard preview.",
+    "image": "https://i.ibb.co.com/KcDXYq4P/XAI.jpg",
+    "tags": ["Next.js", "Three.js", "GSAP", "Framer Motion", "Tailwind"],
+    "github": "https://github.com/Ahsanul-Islam-083/xai-intelligence",
+    "live": "https://xai-intelligence-eight.vercel.app",
+    "challenges": "Coordinating four different animation systems (GSAP/ScrollTrigger for scroll-pinned scrubbing, Framer Motion for component-level transitions, vanilla Canvas 2D for a 130-particle engine, and Three.js/WebGL for the hero's particle mesh) without them fighting each other for control of the frame loop or causing jank. The Canvas-based NeuralCluster in particular needed hand-rolled trigonometric math (Math.sin/Math.atan2) driven by scroll velocity, deliberately avoiding React reconciliation overhead for per-frame updates.",
+    "improvements": "Consolidate the animation layer where possible — evaluate whether GSAP alone could replace some of the Framer Motion usage to reduce bundle size and dependency overlap. Add reduced-motion support for accessibility given how animation-heavy the experience is."
+  },
+  {
+    "slug": "keen-keeper",
+    "title": "KeenKeeper – Your Personal Friendship Manager",
+    "category": "Frontend Engineering",
+    "description": "KeenKeeper is a relationship management app that helps you stay connected with the people who matter most. It tracks when you last contacted each friend, reminds you when you're overdue, and logs every interaction — calls, texts, and video chats — so no important relationship slips through the cracks.",
+    "image": "https://i.ibb.co.com/nNSV7N35/Keen-Keeper.png",
+    "tags": ["Next.js", "JavaScript (ES6+)", "Tailwind", "HeroUI", "Recharts", "Context API"],
+    "github": "https://github.com/Ahsanul-Islam-083/keen-keeper",
+    "live": "https://keen-keeper-zeta.vercel.app",
+    "challenges": "With no backend, keeping interaction history consistent across pages during a session required leaning on Context API as a global store, while still using server components to fetch the base friend data. Avoiding duplicate fetch calls between generateMetadata and the page component needed React.cache() for deduplication, and isolating loading states with Suspense so the banner stayed visible while only the content area showed a skeleton took careful component boundary placement.",
+    "improvements": "Move from a static hosted data.json to a real backend/database so interaction logs and friend data persist permanently instead of resetting each session. Add reminders/notifications (email or push) when a friend becomes overdue for contact instead of requiring a manual dashboard check."
+  },
+  {
+    "slug": "digi-tools",
+    "title": "DigiTools — Premium Digital Tools Store",
+    "category": "Frontend Engineering",
+    "description": "Explore, Add & Checkout — A clean and responsive digital tools store built with React, featuring a live cart, instant notifications, and smooth tab navigation.",
+    "image": "https://i.ibb.co/vxV7G2MN/digitools.png",
+    "tags": ["React.js", "Tailwind CSS", "DaisyUI", "JavaScript (ES6+)", "React-Toastify"],
+    "github": "https://github.com/Ahsanul-Islam-083/digi-tools",
+    "live": "https://digi-tool.netlify.app",
+    "challenges": "With no backend, cart state (adding, preventing duplicates, computing totals) all had to live client-side in React state and stay accurate in real time as items moved between the Products and Cart tabs. Making the duplicate-prevention and total-calculation logic reliable with plain useState and Array.reduce(), while giving instant toast feedback for every action, took careful state design.",
+    "improvements": "Move product data from a static local tools.json to a real backend so the catalog can be updated without a redeploy. Add persistent cart storage (so it survives a page refresh) and a real payment integration instead of a simulated checkout."
+  },
+  {
+    "slug": "english-janala",
+    "title": "English Janala",
+    "category": "Frontend Engineering",
+    "description": "Learn English Vocabulary — Level by Level — An interactive vocabulary learning app powered by a live API with pronunciation, search, and save features!",
+    "image": "https://i.ibb.co/wN4yhRPz/english-Janala.png",
+    "tags": ["JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "API Integration", "Web Speech API"],
+    "github": "https://github.com/Ahsanul-Islam-083/english-janala-app",
+    "live": "https://ahsanul-islam-083.github.io/english-janala-app",
+    "challenges": "Built with vanilla JavaScript and no framework, so handling loading states, error cases for missing/invalid API data, and keeping the active-lesson button highlight in sync with fetched content all had to be managed manually with direct DOM manipulation rather than reactive state. Integrating the Web Speech API for pronunciation also meant handling browser support inconsistencies for speech synthesis.",
+    "improvements": "Migrate to a lightweight framework (or add a build step) to make state and DOM updates more maintainable as features grow. Add a progress-tracking system so users can see how many words they've learned per level over time, persisted in local storage."
+  }
+]

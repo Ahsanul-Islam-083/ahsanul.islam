@@ -3,6 +3,8 @@ import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import GlobalGlow from "@/components/ui/GlobalGlow";
 import CustomCursor from "@/components/layout/CustomCursor";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,9 +37,11 @@ export default function RootLayout({ children }) {
       >
         <GlobalGlow />
         <CustomCursor />
+        <Navbar />
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        <Footer />
       </body>
     </html>
   );

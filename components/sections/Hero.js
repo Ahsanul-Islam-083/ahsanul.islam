@@ -5,7 +5,7 @@ import gsap from "gsap";
 import SplitType from "split-type";
 import { motion } from "framer-motion";
 import Magnetic from "@/components/ui/Magnetic";
-import { FaGithub, FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
@@ -121,10 +121,11 @@ export default function Hero() {
         >
           <Magnetic>
             <a
-              href="mailto:ahsanulislam083@gmail.com"
+              href="/Resume.pdf"
+              download="Resume.pdf"
               className="flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-[#C9B59C] text-[#0F1115] font-bold rounded-full hover:bg-[#D8C6AF] transition-colors shadow-lg shadow-[#C9B59C]/20"
             >
-              Say Hello <FaPaperPlane />
+              Download CV <FaDownload />
             </a>
           </Magnetic>
         </motion.div>

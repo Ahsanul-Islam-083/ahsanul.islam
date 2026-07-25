@@ -4,20 +4,20 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 
 const journey = [
-  {
-    year: "2017",
-    title: "SSC Graduation",
-    place: "Chalakchar ML High School",
-    description: "Completed secondary education with a focus on science and technology.",
-    side: "left"
-  },
-  {
-    year: "2019",
-    title: "HSC Graduation", 
-    place: "Narsingdi Science College",
-    description: "Deepened my interest in mathematics and computer science fundamentals.",
-    side: "right"
-  },
+  // {
+  //   year: "2017",
+  //   title: "SSC Graduation",
+  //   place: "Chalakchar ML High School",
+  //   description: "Completed secondary education with a focus on science and technology.",
+  //   side: "left"
+  // },
+  // {
+  //   year: "2019",
+  //   title: "HSC Graduation", 
+  //   place: "Narsingdi Science College",
+  //   description: "Deepened my interest in mathematics and computer science fundamentals.",
+  //   side: "right"
+  // },
   {
     year: "2021",
     title: "B.Sc. in CSE",

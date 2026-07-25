@@ -55,9 +55,9 @@ export default function Footer() {
         className="flex gap-3 sm:gap-6 text-xs uppercase tracking-widest font-mono"
         style={{ color: "var(--text-secondary)" }}
       >
-        <a href="#about" className="hover:text-[#C9B59C] transition-colors">About</a>
-        <a href="#projects" className="hover:text-[#C9B59C] transition-colors">Projects</a>
-        <a href="#contact" className="hover:text-[#C9B59C] transition-colors">Contact</a>
+        <a href="/#about" className="hover:text-[#C9B59C] transition-colors">About</a>
+        <a href="/#projects" className="hover:text-[#C9B59C] transition-colors">Projects</a>
+        <a href="/#contact" className="hover:text-[#C9B59C] transition-colors">Contact</a>
       </div>
     </footer>
   );

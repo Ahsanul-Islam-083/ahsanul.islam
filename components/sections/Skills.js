@@ -22,6 +22,13 @@ import {
   SiHtml5,
   SiRedux,
   SiMui,
+  SiPostgresql,
+  SiPrisma,
+  SiStrapi,
+  SiVercel,
+  SiRender,
+  SiRailway,
+  SiNetlify,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
 
@@ -29,7 +36,10 @@ const techStack = [
   { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
   { name: "Next.js", icon: <SiNextdotjs />, color: "#FFFFFF" },
   { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
+  { name: "PostgreSQL", icon: <SiPostgresql />, color: "#4169E1" },
+  { name: "Prisma ORM", icon: <SiPrisma />, color: "#2D3748" },
   { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
+  { name: "Strapi CMS", icon: <SiStrapi />, color: "#4945FF" },
   { name: "Firebase", icon: <SiFirebase />, color: "#FFCA28" },
   { name: "JWT Auth", icon: <SiJsonwebtokens />, color: "#D63AFF" },
   { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
@@ -40,12 +50,15 @@ const techStack = [
   { name: "Bootstrap", icon: <FaBootstrap />, color: "#7952B3" },
   { name: "Framer Motion", icon: <SiFramer />, color: "#0055FF" },
   { name: "GSAP", icon: <SiGreensock />, color: "#88CE02" },
+  { name: "Vercel", icon: <SiVercel />, color: "#FFFFFF" },
+  { name: "Render", icon: <SiRender />, color: "#46E3B7" },
+  { name: "Railway", icon: <SiRailway />, color: "#FFFFFF" },
+  { name: "Netlify", icon: <SiNetlify />, color: "#00C7B7" },
   { name: "Git & GitHub", icon: <FaGitAlt />, color: "#F05032" },
   { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
   { name: "VS Code", icon: <VscCode />, color: "#007ACC" },
   { name: "Vite", icon: <SiVite />, color: "#646CFF" },
 ];
-
 
 const frontendSkills = [
   { name: "React.js", level: "Expert", icon: "⚛️" },
@@ -59,13 +72,16 @@ const frontendSkills = [
   { name: "Bootstrap", level: "Expert", icon: "🅱️" },
   { name: "HeroUI", level: "Intermediate", icon: "🦸" },
   { name: "Axios", level: "Expert", icon: "📡" },
-{ name: "React Hook Form", level: "Advanced", icon: "📝" },
+  { name: "React Hook Form", level: "Advanced", icon: "📝" },
 ];
 
 const backendSkills = [
   { name: "Node.js", level: "Expert", icon: "🟢" },
   { name: "Express.js", level: "Expert", icon: "🚀" },
+  { name: "PostgreSQL", level: "Advanced", icon: "🐘" },
   { name: "MongoDB", level: "Expert", icon: "🍃" },
+  { name: "Prisma ORM", level: "Advanced", icon: "💎" },
+  { name: "Strapi CMS", level: "Intermediate", icon: "📦" },
   { name: "REST API", level: "Expert", icon: "🔗" },
   { name: "Firebase", level: "Advanced", icon: "🔥" },
   { name: "Better Auth", level: "Intermediate", icon: "🛡️" },

@@ -13,9 +13,9 @@
   },
   {
     "slug": "fitflow",
-    "title": "FitFlow — Fitness Class Marketplace",
+    "title": "FitFlow — A Gym Management Platform",
     "category": "Full-Stack Development",
-    "description": "Discover, Book & Train — A role-based fitness marketplace connecting members, trainers, and admins with Stripe-powered booking, forums, and dashboard analytics.",
+    "description": "Discover, Book & Train — A role-based fitness platform for connecting members, trainers, and admins with Stripe-powered booking, forums, and dashboard analytics.",
     "image": "https://i.ibb.co.com/v46M0XkH/Fit.jpg",
     "tags": ["Next.js", "React", "Tailwind", "Shadcn UI", "BetterAuth", "Stripe", "MongoDB"],
     "github": "https://github.com/Ahsanul-Islam-083/fitflow",
@@ -23,6 +23,41 @@
     "challenges": "Coordinating three distinct role-based dashboards (member, trainer, admin) behind a single auth system meant careful middleware design in proxy.js to enforce route protection per role, on top of an already complex feature set spanning bookings, forums, and moderation. Integrating Stripe for secure class bookings required getting the checkout and confirmation flow to hold up reliably alongside the rest of the booking lifecycle (enrollment tracking, attendee lists, favorites).",
     "improvements": "Add real-time notifications for booking confirmations and forum activity instead of relying on page refresh/poll patterns. Expand trainer analytics with more granular performance metrics per class over time."
   },
+  {
+  "slug": "skillflow-lms",
+  "title": "SkillFlow — Full-Stack Learning Management System",
+  "category": "Full-Stack Development",
+  "description": "A full-stack Learning Management System featuring a four-tier role-based access control matrix (Admin, Content Manager, Instructor, and Student)[cite: 1]. Includes sequential video/text lesson players with persistent progress tracking, MCQ quizzes with automated grading, an editorial blog engine with draft/publish states, and an admin dashboard for live platform metrics and user role management[cite: 1].",
+  "image": "https://i.ibb.co.com/G4NBGW4T/Skill-Flow-thumbnail.jpg",
+  "tags": [
+    "Next.js",
+    "React",
+    "Strapi v5",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "Koa.js",
+    "JWT",
+    "Google OAuth",
+    "Vercel",
+    "Railway"
+  ],
+  "github": "https://github.com/Ahsanul-Islam-083/SkillFlow--Learning-Management-System-",
+  "live": "https://skill-flow-lms.vercel.app",
+  "challenges": "Enforcing strict row-level authorization across four distinct roles required overriding default Strapi core controllers to dynamically inject user ownership filters, guaranteeing instructors can only access and modify their own courses[cite: 1]. Handling production authentication presented reverse-proxy obstacles on Railway where unencrypted internal HTTP connections crashed secure session cookie delivery; resolving this required configuring Koa proxy trust flags (`proxy: true`) and matching PUBLIC_URL environments. Additionally, harmonizing Google OAuth 2.0 callback routes and resolving preflight CORS restrictions between separate Vercel and Railway deployments required systematic origin configuration.",
+  "improvements": "Implement direct video hosting and adaptive bitrate streaming via Cloudinary or AWS S3 instead of relying on external embed URLs. Integrate Stripe checkout to handle course purchasing and payment webhooks. Introduce real-time student-instructor discussion forums and automated certificate generation upon 100% course completion."
+},
+  {
+    "slug": "gadget-shop",
+    "title": "Gadget Shop — Full-Stack E-Commerce Platform",
+    "category": "Full-Stack Development",
+    "description": "A full-stack e-commerce storefront for electronic gadgets, featuring a searchable/filterable product catalog, cart and wishlist, order tracking, and an admin dashboard with live sales analytics.",
+    "image": "https://i.ibb.co.com/9mLPXFH5/Gadget-Shop-thumbnail.jpg",
+    "tags": ["Next.js", "React", "TypeScript", "Express.js", "PostgreSQL", "Prisma", "JWT", "Google OAuth", "Tailwind"],
+    "github": "https://github.com/Ahsanul-Islam-083/gadget-shop-client",
+    "live": "https://gadget-shop-client-blue.vercel.app",
+    "challenges": "Designing a normalized relational schema in Prisma with soft-delete and order status audit history across 8 interrelated services required careful relation and enum planning upfront. Adding Google OAuth after the core JWT auth system was already built meant retrofitting the User model to support nullable passwords, backfilling profile images for existing accounts without overwriting manually uploaded avatars, and getting the CORS/redirect configuration right across separate frontend (Vercel) and backend (Render) origins.",
+    "improvements": "Migrate JWT storage from localStorage to httpOnly cookies with CSRF protection for stronger security. Add Stripe checkout to complete the payment flow, which was deferred from the original scope. Expand the admin panel with review moderation and richer analytics."
+},
   {
     "slug": "happytails-hub",
     "title": "HappyTails — Hub",
